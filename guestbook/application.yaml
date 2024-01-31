@@ -3,13 +3,13 @@ kind: Application
 metadata:
   name: guestbook
   namespace: guestbook
-labels:
-  name: guestbook  
+  labels:
+    name: guestbook  
 spec:
   project: default
   source:
     repoURL: https://github.com/marushkas/demo-argocd-example-apps.git
-    targetRevision: HEAD
+    targetRevision: patch-1
     path: guestbook
   destination:
     server: https://kubernetes.default.svc
